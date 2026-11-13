@@ -1,36 +1,48 @@
-# AI录单交互验证Demo
+# Order Entry Playground
 
-用于验证单据字段、人工校验及录入交互的本地L0 Mock Demo。
+**Try the review flow before wiring up the AI.**
 
-GitHub：[eli-ovops/ai-order-entry-demo](https://github.com/eli-ovops/ai-order-entry-demo)
+Once a document comes in, who checks it, which fields can change, and what happens when something looks wrong?
 
-## 内容
+This small React demo lets you walk through those questions with mock data before connecting OCR or a business system.
 
-本次公开副本包含 20 个来源文件。
+## What you can try
 
-- [`ai-order-entry-mvp/.gitignore`](ai-order-entry-mvp/.gitignore)
-- [`ai-order-entry-mvp/DESIGN.md`](ai-order-entry-mvp/DESIGN.md)
-- [`ai-order-entry-mvp/PRODUCT.md`](ai-order-entry-mvp/PRODUCT.md)
-- [`ai-order-entry-mvp/README.md`](ai-order-entry-mvp/README.md)
-- [`ai-order-entry-mvp/index.html`](ai-order-entry-mvp/index.html)
-- [`ai-order-entry-mvp/package-lock.json`](ai-order-entry-mvp/package-lock.json)
-- [`ai-order-entry-mvp/package.json`](ai-order-entry-mvp/package.json)
-- [`ai-order-entry-mvp/postcss.config.js`](ai-order-entry-mvp/postcss.config.js)
-- [`ai-order-entry-mvp/tailwind.config.js`](ai-order-entry-mvp/tailwind.config.js)
-- [`ai-order-entry-mvp/tsconfig.json`](ai-order-entry-mvp/tsconfig.json)
+- An upload screen and simulated recognition results.
+- A manual-review form with editable structured fields.
+- Record filters and a mock audit-log interface.
 
-文件类型：.md（8）、.json（4）、.js（2）、.tsx（2）、(no extension)（1）、.html（1）、.css（1）、.ts（1）。
+## Run the demo
 
-## 使用与阅读入口
+From the repository root, using Node.js and npm:
 
-先查看保留的原项目 README、包清单与直接相关源码；运行环境和依赖以项目内实际说明为准。
-- [项目说明：ai-order-entry-mvp/README.md](ai-order-entry-mvp/README.md)
+```bash
+cd ai-order-entry-mvp
+npm install
+npm run dev
+```
 
-## 来源与许可
+Open the local address printed by Vite. See the [original setup and feature notes](ai-order-entry-mvp/README.md) and [product scope](ai-order-entry-mvp/PRODUCT.md) for details.
 
-本仓库新增介绍及用户原创部分按 MIT 许可公开；第三方材料按其各自许可证和署名使用，不以本许可证重新授权第三方内容。
+## What is mocked
 
-来源文件中记录的公开 GitHub 链接（不表示已逐项独立验证）：
+Recognition, records, and audit logs use sample data. There is no OCR integration, language model, backend, or database. Uploads are not persisted. The Excel export control is a UI placeholder and does not create a file.
+
+This is an interaction prototype, not a production order-processing system. The setup instructions come from the existing project; the public copy was not rebuilt during this documentation update. Some linked project notes are in Chinese.
+
+## Sources and license
+
+The new presentation material and the owner's original contributions are published under the [MIT license](LICENSE). Third-party material keeps its own licenses and attribution; this license does not relicense it. Existing source and license files have not been changed by this update.
+
+This public snapshot contains 20 source files. The [source manifest](SOURCE_MANIFEST.csv) lists their paths and hashes. Original media, databases, private account records, and unprocessed attachments are outside this public text-and-source snapshot.
+
+Publication and static checks do not establish runtime readiness, customer acceptance, or measured productivity gains.
+
+<details>
+<summary>Reference links retained from the project notes</summary>
+
+These links were present in the source notes; they have not all been independently reviewed.
+
 - https://github.com/sponsors/SuperchupuDev
 - https://github.com/sponsors/ai
 - https://github.com/sponsors/antonk52
@@ -41,10 +53,4 @@ GitHub：[eli-ovops/ai-order-entry-demo](https://github.com/eli-ovops/ai-order-e
 - https://github.com/sponsors/sindresorhus
 - https://github.com/vitejs/vite
 
-## 当前状态与验证边界
-
-- 本次完成公开副本整理和静态检查；没有运行来源代码、构建 App、安装 Skill 或启动服务。
-- 项目可能处于原型、实验或研究阶段；没有将其表述为生产交付、客户验收或经过验证的投资收益。
-- 图片、视频、数据库、真实账户记录及未确认可公开的附件没有随本次文本/源码副本上传。
-- 部分相对链接、运行依赖或素材可能仍需补齐；原始快照中的静态引用缺口数为 0，该数字不是运行失败数。
-- [本次来源文件清单](SOURCE_MANIFEST.csv)
+</details>
